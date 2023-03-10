@@ -4,7 +4,7 @@ default:
       type: postgres
       threads: 1
       host: 172.17.0.2 
-      port: 5431 
+      port: 5432 
       user: postgres 
       pass: '1234' 
       dbname: test 
@@ -13,7 +13,7 @@ default:
       type: postgres
       threads: 1
       host: 172.17.0.2 
-      port: 5431 
+      port: 5432 
       user: postgres 
       pass: '1234' 
       dbname: test 
