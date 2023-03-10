@@ -1,0 +1,11 @@
+version: 2
+
+sources:
+  - name: test 
+    description: This is the Postgres database running in docker
+    database: test
+    schema: public
+    tables:
+      - name: hacker_data 
+        description: >
+          All hacking records from the honeypot data.

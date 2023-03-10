@@ -29,7 +29,7 @@ print('Cleaning complete. Ready to write into db')
 #writing out the dataframe to postgres database
 try:
     null_filled_data.to_sql(name='hacker_data',con=credentials,
-                        if_exists='replace',index=False)
+                        if_exists='replace',index=True)
     print('Connect to postgres db and check the table hacker_data by select command')
 except Exception as e:
     print(e)
