@@ -1,0 +1,21 @@
+default:
+  outputs:
+   prod:
+      type: postgres
+      threads: 1
+      host: 172.17.0.2 
+      port: 5431 
+      user: postgres 
+      pass: '1234' 
+      dbname: test 
+      schema: dbt_kmm
+    pub:
+      type: postgres
+      threads: 1
+      host: 172.17.0.2 
+      port: 5431 
+      user: postgres 
+      pass: '1234' 
+      dbname: test 
+      schema: public 
+  target: pub
