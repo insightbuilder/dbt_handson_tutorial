@@ -1,0 +1,33 @@
+Pulling the docker from dockerhub
+
+Initiating the postgres server inside docker and keeping the data in local drive
+
+docker run -dp 5431:5432 --name docpost -e "POSTGRES_PASSWORD=pass" -e "POSTGRES_USER=postgres" \ 
+    -v /home/postgres-target/:/var/lib/postgresql/data  \ 
+     postgres:latest
+
+Getting the docker status 
+docker ps -a 
+Ensure the postgres docker is running. Not showing as exited
+
+Inspecting the docker for ip address and use it in the connection string
+
+docker inspect container_name
+
+Then sending the data into the docker postgres server after cleaning it in python
+-Ensure you can connect with docker postgres instance using 
+  docker exec -it container_name psql -h localhost -U postgres
+
+- Create a database named test using CREATE DATABASE test;
+- Connect to new database using \c test;
+- list the tables in the database using \d
+- exit using \q
+Then execute the postgres_dataloader.py
+
+Will first share the process of getting the dbt-core and dbt-postgres installed
+
+Then init the dbt environment inside the git repo folder
+
+Show the profiles.yml file and and dbt_project.yml so it directs at postgres docker
+
+Check the connectivity with dbt debug
